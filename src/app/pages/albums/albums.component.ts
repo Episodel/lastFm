@@ -59,13 +59,13 @@ export class AlbumsComponent implements OnInit, OnDestroy {
     this.destroySubject$.next();
   }
 
-  openSnackBar(message: string, action: string) {
+  private openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {
       duration: 2000,
     });
   }
 
-  toLocalStorage(data: IAlbumStorage): void {
+  public toLocalStorage(data: IAlbumStorage): void {
     this.albums[data.idx].like = !this.albums[data.idx].like;
 
     if (!this.albums[data.idx].like) {

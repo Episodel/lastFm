@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  resetInput() {
+  public resetInput() {
     this.albumsS.setSearch('');
   }
 }
