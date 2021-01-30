@@ -21,7 +21,7 @@ export class AlbumCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  setAlbumData(): void {
+  public setAlbumData(): void {
     this.addToLocalStorage.emit({
       // @ts-ignore
       albumData: this.albumData,

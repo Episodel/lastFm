@@ -14,7 +14,7 @@ export class GenreCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  genreLink(title: string | undefined): void {
+  public genreLink(title: string | undefined): void {
     this.router.navigate([title, 'albums']);
   }
 }
