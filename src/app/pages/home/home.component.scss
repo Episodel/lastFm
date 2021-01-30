@@ -1,0 +1,11 @@
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__genre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+  }
+}

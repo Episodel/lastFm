@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card__content">
+    <img src="{{ albumData.image[3]['#text'] }}" alt="{{ albumData.name }}" />
+  </div>
+  <div class="card__hover">
+    <div class="card__hover__content">
+      <div class="card__album-label">{{ albumData.name }}</div>
+      <div class="card__artist-name">{{ albumData.artist["name"] }}</div>
+      <div
+        *ngIf="albumData.like; else iconEmpty"
+        class="card__icon"
+        (click)="setAlbumData()"
+      >
+        <img src="./assets/icon/heartFull.svg" alt="icon" />
+      </div>
+
+      <ng-template #iconEmpty>
+        <div class="card__icon" (click)="setAlbumData()">
+          <img src="./assets/icon/heartEmpty.svg" alt="icon" />
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

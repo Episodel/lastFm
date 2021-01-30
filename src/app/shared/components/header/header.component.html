@@ -1,0 +1,22 @@
+<div class="albums__header">
+  <div class="albums__navigate">
+    <a class="albums__link" (click)="resetInput()" routerLink='/'>Back</a>
+    <label>
+      <input
+        type="text"
+        class="albums__text-field"
+        (input)="albumsS.setSearch($event.target.value)"
+        [value]="albumsS.getSearch$() | async"
+      />
+    </label>
+  </div>
+
+  <div class="albums__icon">
+    <span
+      class="albums__icon__content"
+      *ngIf="(albumsS.getCounterLike$ | async) > 0"
+      >{{ albumsS.getCounterLike$ | async }}</span
+    >
+    <img src="./assets/icon/heartFull.svg" alt="heart" />
+  </div>
+</div>

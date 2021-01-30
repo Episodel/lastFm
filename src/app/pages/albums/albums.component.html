@@ -1,0 +1,10 @@
+<div class="albums">
+  <div class="albums__content">
+    <app-album-card
+      *ngFor="let a of albums; let i = index"
+      [albumData]="a"
+      [idx]="i"
+      (addToLocalStorage)="toLocalStorage($event)"
+    ></app-album-card>
+  </div>
+</div>

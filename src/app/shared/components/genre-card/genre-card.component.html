@@ -1,0 +1,8 @@
+<div class="card" [style.backgroundColor]="genreData?.color" (click)='genreLink(genreData?.title)'>
+  <div class="card__content">
+    <h3 class="card__title">{{ genreData?.title }}</h3>
+    <div class="card__label">
+      <img src="{{ genreData?.image }}" alt="{{ genreData?.title }}" />
+    </div>
+  </div>
+</div>

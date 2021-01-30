@@ -1,0 +1,10 @@
+<main class="home">
+  <div class="container">
+    <div class="home__genre">
+      <app-genre-card
+        *ngFor="let g of genreData"
+        [genreData]="g"
+      ></app-genre-card>
+    </div>
+  </div>
+</main>
